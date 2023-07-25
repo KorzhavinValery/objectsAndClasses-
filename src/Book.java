@@ -1,7 +1,7 @@
 public class Book {
-private String titleBook;
-private Author author;
-private int yearOfPublication;
+    private String titleBook;
+    private Author author;
+    private int yearOfPublication;
 
     public Book(String titleBook, Author author, int yearOfPublication) {
         this.titleBook = titleBook;
@@ -12,6 +12,7 @@ private int yearOfPublication;
     public String getTitleBook() {
         return this.titleBook;
     }
+
     public Author getAuthor() {
         return this.author;
     }
@@ -23,9 +24,10 @@ private int yearOfPublication;
     public void setYearOfPublication(int yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
     }
-public static void printBook(Book Book) {
-    System.out.println("Название книги = " + Book.titleBook);
-    Author.printAuthor(Book.author);
-    System.out.println("Год публикации = " + Book.yearOfPublication);
-}
+
+    public static void printBook(Book Book) {
+        System.out.println("Название книги = " + Book.titleBook);
+        Author.printAuthor(Book.author);
+        System.out.println("Год публикации = " + Book.yearOfPublication);
+    }
 }

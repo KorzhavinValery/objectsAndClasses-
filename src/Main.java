@@ -7,6 +7,5 @@ public class Main {
         Book.printBook(book1);
         book1.setYearOfPublication(1989);
         Book.printBook(book1);
-
     }
 }
