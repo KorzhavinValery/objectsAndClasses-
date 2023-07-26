@@ -14,7 +14,7 @@ public class Book {
     }
 
     public Author getAuthor() {
-        return this.author;
+        return this.author = author;
     }
 
     public int getYearOfPublication() {
@@ -25,9 +25,13 @@ public class Book {
         this.yearOfPublication = yearOfPublication;
     }
 
-    public static void printBook(Book Book) {
-        System.out.println("Название книги = " + Book.titleBook);
-        Author.printAuthor(Book.author);
-        System.out.println("Год публикации = " + Book.yearOfPublication);
+    public void printBook() {
+        System.out.println("Название книги = " + titleBook);
+        System.out.println("ФИО = " + author.getAuthor());
+        System.out.println("Год публикации = " + yearOfPublication);
+    }
+
+    public void printAuthor() {
+        System.out.println("ФИО = " + author.getAuthor());
     }
 }
