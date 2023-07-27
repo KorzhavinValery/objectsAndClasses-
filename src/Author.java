@@ -16,4 +16,7 @@ public class Author {
         return this.surname;
     }
 
+    public void printAuthor() {
+        System.out.println("ФИО = " + getName() + " " + getSurname());
+    }
 }
