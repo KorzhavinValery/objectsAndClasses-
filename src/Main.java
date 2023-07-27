@@ -8,6 +8,7 @@ public class Main {
         book1.setYearOfPublication(1989);
         book1.printBook();
         System.out.println("======");
-        book1.printAuthor();
+        System.out.println("Имя автора = " + book1.getAuthor().getName());
+
     }
 }
