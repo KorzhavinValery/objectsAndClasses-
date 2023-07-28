@@ -9,14 +9,16 @@ public class Author {
     }
 
     public String getName() {
-        return this.name;
+        return "Имя автора = " + this.name;
     }
 
     public String getSurname() {
-        return this.surname;
+        return "Фамилия автора = " + this.surname;
     }
 
-    public void printAuthor() {
-        System.out.println("ФИО = " + getName() + " " + getSurname());
+    @Override
+    public String toString() {
+        return
+                "Имя = " + name + "\n" + "Фамилия = " + surname;
     }
 }

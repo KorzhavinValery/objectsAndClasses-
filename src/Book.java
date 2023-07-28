@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private String titleBook;
     private Author author;
@@ -22,13 +24,29 @@ public class Book {
     }
 
     public void setYearOfPublication(int yearOfPublication) {
+        if (yearOfPublication < 0) {
+            throw new IllegalArgumentException("Год не может быть отрицательным.");
+        }
         this.yearOfPublication = yearOfPublication;
     }
 
-    public void printBook() {
-        System.out.println("Название книги = " + titleBook);
-        System.out.println("ФИО = " + author.getName() + " " + author.getSurname());
-        System.out.println("Год публикации = " + yearOfPublication);
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (this.getClass() != other.getClass()) return false;
+        Book book = (Book) other;
+        return Objects.equals(titleBook, book.titleBook) && Objects.equals(author, book.author);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(titleBook, author);
+    }
+
+    @Override
+    public String toString() {
+        return "Название книги = " + titleBook
+                + "\n" + author.toString() + "\n" +
+                "Год публикации = " + yearOfPublication;
     }
 }
