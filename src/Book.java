@@ -27,7 +27,7 @@ public class Book {
 
     public void printBook() {
         System.out.println("Название книги = " + titleBook);
-        System.out.println("ФИО = " + author.getName() + author.getSurname());
+        System.out.println("ФИО = " + author.getName() + " " + author.getSurname());
         System.out.println("Год публикации = " + yearOfPublication);
 
     }
