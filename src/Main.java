@@ -11,6 +11,7 @@ public class Main {
         System.out.println(author1.getName());
         System.out.println("======");
         System.out.println(book1.equals(book2));
+        System.out.println(author1.equals(author2));
 
     }
 }
